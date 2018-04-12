@@ -10,20 +10,47 @@ function initMap() {
     disableDefaultUI: true,
     zoom: 18,
     styles: [{
-        "featureType": "poi.business",
+        "featureType": "administrative",
+        "elementType": "geometry",
         "stylers": [{
           "visibility": "off"
         }]
       },
       {
-        "featureType": "poi.park",
-        "elementType": "labels.text",
+        "featureType": "administrative.land_parcel",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "administrative.neighborhood",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "poi",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "road",
+        "elementType": "labels.icon",
         "stylers": [{
           "visibility": "off"
         }]
       },
       {
         "featureType": "road.arterial",
+        "elementType": "labels",
         "stylers": [{
           "visibility": "off"
         }]
@@ -37,6 +64,19 @@ function initMap() {
       },
       {
         "featureType": "road.local",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "transit",
+        "stylers": [{
+          "visibility": "off"
+        }]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text",
         "stylers": [{
           "visibility": "off"
         }]
@@ -115,6 +155,7 @@ function gotData(data) {
     var category = values[k].category;
     var host = values[k].host;
     var info = values[k].info;
+    var featuredSelect = values[k].featured;
     var description = values[k].description;
     var date = values[k].date;
     var location = values[k].location;
@@ -122,24 +163,24 @@ function gotData(data) {
     var endTime = values[k].endTime;
     var longitude = values[k].longCoord;
     var latitude = values[k].latCoord;
+    var image = values[k].image;
     var pos = {
       lat: latitude,
       lng: longitude
     };
-    console.log(eventName);
-    console.log(location);
     var mapLink = 'https://www.google.com/maps/place/' + location;
-    var contentString = '<div class="row"><div class="col s12"><div id="rcorners2" class="animated fadeIn"><div class="black-text"><h5 class="center-align teal-text  lighten-3-text">' + eventName + '</h5><div class="center-align"><p>Hosted by ' + host + ' | ' + category + '</p></div><br><p class="center-align">' + description + '</p><br><p class="center-align">' + startTime + ' - ' + endTime + ' | ' + date + '</p></div> <br><div class="row center-align"><div class="col s4"><a class="button is-primary is-rounded is-large"><span class="icon  has-text-light is-large"><i class="fas fa-comments is-large"></i></span></a></div><div class="col s4"><a class="button is-dark is-rounded is-large" href="' + mapLink + '"><span class="icon has-text-light"><i class="fas fa-map-marker-alt"></i></span></a></div><div class="col s4"><a class="button is-link is-rounded is-large" href="' + info + '"><span class="icon has-text-light"><i class="fas fa-info-circle"></i></span></a></div></div></div></div></div></div></div>';
+    var contentString = '<div class="animated fadeInUp"><div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-left">'+date +'</div><div class="bottom-right"><a class="button is-primary is-outlined">Interested</a></div></div><div class="card-reveal"><div class="row"><div class="col s10"><h5><span class="card-title grey-text text-darken-4"><b>' + eventName + '</b></div><div class="col s2"><i class="material-icons right">close</i></span></h5></div></div>' + description + '</p><br><div class="row center-align"><div class="col s6"><a class="button is-medium blue-text grey lighten-3" id="rcorners3" href="'+info+'">More Info</a></div><div class="col s6"><a class="button is-medium white-text blue" id="rcorners3"href="'+mapLink+'">Directions</a></div></div></div></div></div>';
+
     totalContentString.push(contentString);
     for (var j = 0; j < totalContentString.length; j++) {
       var marker = new google.maps.Marker({
         position: pos,
         map: map,
         icon: icons[category].icon,
-
       });
       attachSecretMessage(marker, totalContentString[i]);
     }
+    //featuredPopulate(featuredSelect, image, eventName,description,category);
   }
 }
 
@@ -148,7 +189,13 @@ function locatePopulate() {
     location.reload();
   });
 }
-window.onload = gotData;
+function featuredPopulate(featuredSelect, image, eventName,description,category) {
+  if (featuredSelect == "Yes") {
+    var featuredCard = '<div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-right"><a class="button is-primary is-outlined">Interested</a></div></div><div class="card-reveal"><span class="card-title grey-text text-darken-4">' + eventName + '<i class="material-icons right">close</i></span><p>' + description + '</p></div></div>';
+    document.getElementById("featuredCard").innerHTML = featuredCard;
+    console.log(featuredCard.value);
+  }
+}
 
 function errData(err) {
   console.log('Error occured!');
