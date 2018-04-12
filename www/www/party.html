@@ -5,14 +5,14 @@
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" viewport-fit=cover”/>
   <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
   <title>marco/polo | party</title>
   <link rel="stylesheet" href="../css/bulma.css">
   <link rel="stylesheet" href="../css/animate.css">
   <link rel="stylesheet" href="../css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/icon.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/party.js"></script>
@@ -49,7 +49,14 @@
       overflow: hidden;
       scrollbar: hidden;
     }
-
+    body {
+     padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+     padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+    }
+    .yourFooterClass {
+     margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+     margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+    }
     #logo {
       padding-top: 8px;
     }
@@ -65,9 +72,7 @@
       border-radius: 15px 15px 15px 15px;
       width: 100%;
       box-shadow: 0px 4px 10px #888888;
-      height: 250px;
-      -webkit-filter: blur(1px); /* Safari */
-      filter: blur(1px);
+      height: 300px;
     }
     .row{
       margin: none;
@@ -100,7 +105,7 @@
   </style>
 </head>
 <body onload="gotData();">
-  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation" class="yourFooterClass">
     <div class="tabs is-toggle is-fullwidth is-medium">
       <ul>
         <li class="is-primary is-large">

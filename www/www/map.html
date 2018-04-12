@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" viewport-fit=cover”/>
   <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
   <title>marco/polo | map</title>
@@ -99,10 +99,15 @@
       width: 100%;
       box-shadow: 0px 4px 10px #888888;
       height: 250px;
-      -webkit-filter: blur(1px); /* Safari */
-      filter: blur(1px);
-    }
-
+      }
+      body {
+       padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+       padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+      }
+      .yourFooterClass {
+       margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+       margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+      }
     .top-left {
       position: absolute;
       top: 8px;
@@ -132,7 +137,7 @@
 </head>
 <div id="wrapper" class="center-align">
 
-  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation" class="yourFooterClass">
     <div class="tabs is-toggle is-fullwidth is-medium">
       <ul>
         <li class="is-primary is-large">
