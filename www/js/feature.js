@@ -53,7 +53,7 @@ function gotData(data) {
     console.log(checkDate);
 
     if (featuredSelect == "Yes" && date == checkDate) {
-      var featuredCard = '<div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-right"><a class="button is-primary is-outlined">Interested</a></div></div><div class="card-reveal"><span class="card-title activator grey-text text-darken-4">' + eventName + '<i class="material-icons right activator">close</i></span><p>Hosted by '+ host +'<br><br>' + description + '</p></div></div>';
+      var featuredCard = '<div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-right"><a class="button is-primary is-outlined">Interested</a></div></div><div class="card-reveal"><h5><span class="card-title grey-text text-darken-4">' + eventName + '<i class="material-icons right">close</i></span></h5><p>Hosted by '+ host +'<br><br>' + description + '</p></div></div>';
 
       console.log(featuredCard);
       var card = document.getElementById ("cards");
