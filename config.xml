@@ -7,7 +7,7 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
       Travellers at Marco/Polo
     </author>
-    <content src="index.html" />
+    <content src="www/index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
     <preference name='phonegap-version' value='cli-7.0.1' />
