@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>marco/polo | signup</title>
+  <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
   <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <title>marco/polo | featured</title>
    <link rel="stylesheet" href="css/bulma.css">
    <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/materialize.min.css">
@@ -24,7 +23,6 @@
    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
    <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
-
    <script>
      // Initialize Firebase
      var config = {
@@ -52,7 +50,6 @@
    #logo {
      padding-top: 8px;
    }
-
    #rcorners2 {
      border-radius: 15px;
      box-shadow: 1px 6px 10px #888888;
@@ -65,15 +62,16 @@
      width: 100%;
      box-shadow: 0px 4px 10px #888888;
      height: 300px;
-}
+   }
+   .row{
+     margin: none;
+   }
    .top-left {
      position: absolute;
      top: 8px;
      left: 16px;
      color: white;
-
    }
-
    .top-left2 {
      position: absolute;
      top: 25px;
@@ -92,45 +90,35 @@
      right: 16px;
      color: white;
    }
-   #map {
-     height: 100%;
-     width: 100%;
-   }
-
-   #wrapper {
-     position: relative;
-   }
    </style>
 </head>
-<div id="wrapper" class="center-align">
-  <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
-    <div class="tabs is-toggle is-fullwidth is-medium">
-      <ul>
-        <li class="is-primary is-large">
-          <a href="../index.html">
-          <span class="icon is-large has-text-dark"><i class="fas fa-trophy is-large"></i></span>
-        </a>
-        </li>
-        <li class="is-primary is-large">
-          <a href="map.html">
+<nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+  <div class="tabs is-toggle is-fullwidth is-medium">
+    <ul>
+      <li class="is-primary is-large">
+        <a href="index.html">
+      <span class="icon is-large has-text-dark"><i class="fas fa-trophy is-large"></i></span>
+    </a>
+      </li>
+      <li class="is-primary is-large">
+        <a href="www/map.html">
           <span class="icon is-large has-text-dark"><i class="fas fa-map is-large"></i></span>
         </a>
-        </li>
+      </li>
 
-        <li>
-          <a href="party.html">
+      <li>
+        <a href="www/party.html">
           <span class="icon is-large has-text-dark"><i class="fas fa-glass-martini is-large"></i></span>
         </a>
-        </li>
-        <li>
-          <a href="profile.html">
+      </li>
+      <li>
+        <a href="www/profile.html">
           <span class="icon is-large has-text-dark"><i class="fas fa-paper-plane is-large"></i></span>
         </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <body onload="gotData();">
   <div id="map">
@@ -148,9 +136,7 @@
   <br>
   <div class="container">
     <div id="cards"></div>
-  </div>
-  <br><br>
-</div>
+  <br><br><br>
   <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
