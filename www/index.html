@@ -99,9 +99,13 @@
      right: 16px;
      color: white;
    }
+   .yourFooterClass {
+ margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
    </style>
 </head>
-<nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-bottom yourFooterClass" role="navigation" aria-label="main navigation" id="yourFooterClass">
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
       <li class="is-primary is-large">
@@ -128,7 +132,7 @@
     </ul>
   </div>
 </nav>
-<body onload="gotData();" class="body">
+<body onload="gotData();">
   <div class="container">
     <div class="row">
       <div class="col s6 left-align">
