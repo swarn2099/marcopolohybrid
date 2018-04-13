@@ -99,12 +99,17 @@
      right: 16px;
      color: white;
    }
-   .yourFooterClass {
- margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
- margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
-}
+   #map {
+     height: 100%;
+     width: 100%;
+   }
+
+   #wrapper {
+     position: relative;
+   }
    </style>
 </head>
+<div id="wrapper">
 <nav class="navbar is-fixed-bottom yourFooterClass" role="navigation" aria-label="main navigation" id="yourFooterClass">
   <div class="tabs is-toggle is-fullwidth is-medium">
     <ul>
@@ -132,7 +137,10 @@
     </ul>
   </div>
 </nav>
+</div>
+
 <body onload="gotData();">
+  <div id="map">
   <div class="container">
     <div class="row">
       <div class="col s6 left-align">
@@ -148,6 +156,7 @@
   <div class="container">
     <div id="cards"></div>
   <br><br><br>
+</div>
   <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
