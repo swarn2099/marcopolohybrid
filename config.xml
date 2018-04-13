@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.lsbfinetuned" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>marco/polo</name>
+    <name>Fine-tuned LSB</name>
     <description>
-        Ultimate Event Discovery App for College Students
+        Fine-tuned Launch Storyboard
     </description>
-    <author email="swarn2099@gmail.com" href="http://swarn1120.github.io">
-        Swarn Singh
+    <author email="kerrishotts@gmail.com" href="http://www.photokandy.com">
+        Kerri Shotts
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
