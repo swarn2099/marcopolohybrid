@@ -18,7 +18,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
-  <!-- <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script> -->
+  <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
 
   <script>
     // Initialize Firebase
@@ -33,7 +33,7 @@
     firebase.initializeApp(config);
   </script>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-  <script src="../js/feature.js"></script>
+  <script src="../js/app.js"></script>
   <script src="../js/materialize.min.js"></script>
   <script src="../js/init.js"></script>
   <script>
@@ -44,7 +44,7 @@
     body {
       height: 100%;
       width: 100%;
-      /* overflow: hidden; */
+      overflow: hidden;
     }
 
     #map {
@@ -62,6 +62,13 @@
       bottom: 50px;
       z-index: 99;
       padding: 10px;
+    }
+
+    #img{
+      border-radius: 15px 15px 0px 0px;
+      height: 250px;
+      width: 100%;
+
     }
     #over_map2 {
       position: absolute;
@@ -145,7 +152,7 @@
   </nav>
 </div>
 
-<body onload="gotData();">
+<body onload="getData();">
   <div id="over_map2">
     <div class="center-align">
       <a class="btn-floating btn-small waves-effect waves-light blue white-text" id="btn" onclick="locatePopulate()">
@@ -153,26 +160,15 @@
       </a>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col s6 left-align">
-        <span id="date"><h6 id="demo"></h6></span>
-      </div>
-      <div class="col s6 right-align">
-        <img src="../img/polo.png" id="logo">
-      </div>
-    </div>
-    <span id="superman"><h4 class="black-text bold-text"><b>Featured</b></h4 ></span>
-  </div>
+
 
   <div id="over_map" class="center-align"></div>
-  <div id="cards"></div>
 
-<!-- <div id='map'></div> -->
+<div id='map'></div>
 
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDylrIsz0ZQst_p-ii05i2057e8NzOK8pc
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDylrIsz0ZQst_p-ii05i2057e8NzOK8pc
 &callback=initMap"
-  async defer></script> -->
+  async defer></script>
   <script type="text/javascript" src="../cordova.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
   <script type="text/javascript">
