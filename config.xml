@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.lsbfinetuned" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Fine-tuned LSB</name>
+    <name>marco/polo</name>
     <description>
         Fine-tuned Launch Storyboard
     </description>
@@ -8,7 +8,7 @@
         Kerri Shotts
     </author>
     <content src="index.html" />
-    <preference name="DisallowOverscroll" value="true" />
+    <preference name="DisallowOverscroll" value="false" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
     <preference name="phonegap-version" value="cli-7.0.1" />
     <platform name="ios">
