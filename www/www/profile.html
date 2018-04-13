@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/bulma.css">
   <link rel="stylesheet" href="../css/animate.css">
   <link rel="stylesheet" href="../css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/icon.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/party.js"></script>
@@ -58,20 +58,23 @@
       border-radius: 15px;
       box-shadow: 0px 4px 10px #888888;
     }
+
     #rcorners3 {
       border-radius: 15px;
     }
+
     #img {
       border-radius: 15px 15px 15px 15px;
       width: 100%;
       box-shadow: 0px 4px 10px #888888;
-      height: 250px;
-      -webkit-filter: blur(1px); /* Safari */
-      filter: blur(1px);
+      height: 300px;
+
     }
-    .row{
+
+    .row {
       margin: none;
     }
+
     .top-left {
       position: absolute;
       top: 8px;
@@ -85,12 +88,14 @@
       left: 16px;
       color: white;
     }
+
     .bottom-left {
       position: absolute;
       bottom: 10px;
       left: 16px;
       color: white;
     }
+
     .bottom-right {
       position: absolute;
       bottom: 10px;
@@ -99,6 +104,7 @@
     }
   </style>
 </head>
+
 <body onload="gotData();">
   <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
     <div class="tabs is-toggle is-fullwidth is-medium">
@@ -129,25 +135,56 @@
   </nav>
   <br>
   <div class="container">
-    <div class="row" >
+    <div class="row">
       <div class="col s6 left-align">
-        <span id="date" ><h6 id="demo"></h6></span>
+        <span id="date"><h6 id="demo"></h6></span>
       </div>
       <div class="col s6 right-align">
         <img src="../img/polo.png" id="logo">
       </div>
     </div>
-    <span id="superman"><h4 class="black-text bold-text"><b>Feedback</b></h4 ></span>
+    <span id="superman"><h4 class="black-text bold-text"><b>Feedback | Contact</b></h4 ></span>
   </div>
   <br>
   <div class="container">
-    <a class="button is-large is-rounded is-primary" href="add.html">Add Event</a>
-<br><br>
-  <script type="text/javascript" src="../cordova.js"></script>
-  <script type="text/javascript" src="../js/index.js"></script>
-  <script type="text/javascript">
+    <div class="animated fadeInUp">
+      <div class="card" id="rcorners2">
+        <div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://images.unsplash.com/photo-1494707924465-e1426acb48cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7cac606b3752d340f2c342f32536727&auto=format&fit=crop&w=2700&q=80" id="img">
+          <div class="top-left">
+            <h6></h6></div>
+          <div class="top-left2">
+            <h5>Submit Feedback</h5></div>
+        </div>
+        <div class="card-reveal"><span class="card-title grey-text text-darken-4"><b>Feeback</b><i class="material-icons right activator">close</i></span><br>
+          <p>This is a beta version of marco/polo. <br><br>We have bugs and we'll do our best to squash them. Giving us feedback or suggesting features will help us improve the app and allow for a better experience.<br><br>Thank you so much for taking the time to test our app.</p><br>
+          <div class="row center-align">
+            <div class="col s12"><a class="button is-medium blue-text grey lighten-3" id="rcorners3" href="">Feedback Form</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="animated fadeInUp">
+      <div class="card" id="rcorners2">
+        <div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d77a452af4c08eccf935416803831774&auto=format&fit=crop&w=2250&q=80" id="img">
+          <div class="top-left">
+            <h6></h6></div>
+          <div class="top-left2">
+            <h5>Suggest an Event</h5></div>
+        </div>
+        <div class="card-reveal"><span class="card-title grey-text text-darken-4"><b>Events</b><i class="material-icons right activator">close</i></span><br>
+          <p>Want an event added to our app?<br><br>Fill our the form below and our Travellers will look through and get it on the app.<br><br></p><br>
+          <div class="row center-align">
+            <div class="col s12"><a class="button is-medium blue-text grey lighten-3" id="rcorners3" href="">Suggest Event</a></div>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+    <br><br>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
       app.initialize();
-  </script>
+    </script>
 </body>
 
 </html>
