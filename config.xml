@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.lsbfinetuned" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-  <name>marco/polo</name>
-  <description>
-    The ultimate event discovery app for college students
-  </description>
-  <author email="kerrishotts@gmail.com" href="http://www.photokandy.com">
-      Travellers at Marco/Polo
-  </author>
+    <name>Fine-tuned LSB</name>
+    <description>
+        Fine-tuned Launch Storyboard
+    </description>
+    <author email="kerrishotts@gmail.com" href="http://www.photokandy.com">
+        Kerri Shotts
+    </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
