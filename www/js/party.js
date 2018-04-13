@@ -52,8 +52,8 @@ function gotData(data) {
     var checkDate = day + ' ' + m + ', ' + y;
     var navLink = 'https://www.google.com/maps/place/' + location;
     console.log(navLink);
-    var link = "window.open('"+info+"', '_blank');";
-    var navigation = "window.open('"+navLink+"', '_blank');";
+    var link = "window.open('"+info+"', '_system');";
+    var navigation = "window.open('"+navLink+"', '_system');";
 
 
     if (category == "Parties") {
