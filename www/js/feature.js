@@ -52,7 +52,7 @@ function gotData(data) {
     var checkDate = day + ' ' + m + ', ' + y;
     console.log(checkDate);
     var navLink = 'https://www.google.com/maps/place/' + location;
-    var link = "window.open('"+info+"', '_system');";
+    var link = "cordova.InAppBrowser.open('"+info+"', '_system');";
     var navigation = "window.open('"+navLink+"', '_system');";
 
     if (featuredSelect == "Yes" && date == checkDate) {
