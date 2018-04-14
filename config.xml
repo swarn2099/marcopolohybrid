@@ -2,10 +2,10 @@
 <widget id="com.example.lsbfinetuned" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Fine-tuned LSB</name>
     <description>
-        Fine-tuned Launch Storyboard
+        Ultimate Event Discovery Platform for College Students
     </description>
     <author email="swarn2099@gmail.com" href="http://www.photokandy.com">
-        Kerri Shotts
+        Swarn Singh
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
