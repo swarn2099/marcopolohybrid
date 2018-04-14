@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.polomarco" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.example.lsbfinetuned" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>marco/polo</name>
     <description>
         Ultimate Event Discovery Platform for College Students
@@ -73,4 +73,19 @@
         <splash src="res/screen/ios/Default@3x~universal~comany.png" />
     </platform>
     <engine name="ios" spec="latest" />
+
+        <access origin="*" />
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
+        <allow-intent href="tel:*" />
+        <allow-intent href="sms:*" />
+        <allow-intent href="mailto:*" />
+        <allow-intent href="geo:*" />
+        <platform name="android">
+            <allow-intent href="market:*" />
+        </platform>
+        <platform name="ios">
+            <allow-intent href="itms:*" />
+            <allow-intent href="itms-apps:*" />
+        </platform>
 </widget>
