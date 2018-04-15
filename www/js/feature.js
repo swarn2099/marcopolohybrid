@@ -53,10 +53,9 @@ function gotData(data) {
     console.log(checkDate);
     var navLink = 'https://www.google.com/maps/place/' + location;
     var link = "cordova.InAppBrowser.open('"+info+"', '_blank');";
-    var navigation = "window.open('"+navLink+"', '_system');";
 
     if (featuredSelect == "Yes" && date == checkDate) {
-      var featuredCard = '<div class="animated fadeInUp"><div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-left">'+date +'</div><div class="bottom-right">'+startTime+' | '+endTime+'</div></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><b>'+eventName+'</b><i class="material-icons right activator">close</i></span><br><p>' + description + '</p><br><div class="row center-align"><div class="col s6"><a class="button is-medium blue-text grey lighten-3" id="rcorners3"  href="'+info+'" target="_blank">More Info</a></div><div class="col s6"><a class="button is-medium white-text blue" id="rcorners3"                 onclick="'+navigation+'">Directions</a></div></div></div></div></div>';
+      var featuredCard = '<div class="animated fadeInUp"><div class="card" id="rcorners2"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="' + image + '" id="img"><div class="top-left"><h6>' + category + '</h6></div><div class="top-left2"><h5>' + eventName + '</h5></div><div class="bottom-left">'+date +'</div><div class="bottom-right">'+startTime+' | '+endTime+'</div></div><div class="card-reveal"><span class="card-title grey-text text-darken-4"><b>'+eventName+'</b><i class="material-icons right activator">close</i></span><br><p>' + description + '</p><br><div class="row center-align"><div class="col s6"><a class="button is-medium blue-text grey lighten-3" id="rcorners3"  href="'+info+'" target="_blank">More Info</a></div><div class="col s6"><a class="button is-medium white-text blue" id="rcorners3" href="'+navLink+'" target="_blank">Directions</a></div></div></div></div></div>';
 
       console.log(featuredCard);
       var card = document.getElementById ("cards");
