@@ -12,7 +12,7 @@
     <preference name="android-minSdkVersion" value="14" />
 <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
 <preference name="phonegap-version" value="cli-7.0.1" />
-<plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
+<!-- <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" /> -->
 <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
 <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
 <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0" />
