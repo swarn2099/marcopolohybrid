@@ -27,6 +27,10 @@
 <!-- <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" /> -->
 <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
+<preference name="StatusBarOverlaysWebView" value="true" />
+<preference name="StatusBarBackgroundColor" value="#000000" />
+<preference name="StatusBarStyle" value="lightcontent" />
+
 <platform name="android">
     <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="res/icon/android/drawable-mdpi-icon.png" />
