@@ -1,4 +1,4 @@
-var lon, lat;
+var lon, lat, realAddress;
 $('#us2').locationpicker({
   enableAutocomplete: true,
   enableReverseGeocode: true,
@@ -7,8 +7,10 @@ $('#us2').locationpicker({
   },
   onchanged: function(currentLocation) {
     var addressComponents = $(this).locationpicker('map').location.addressComponents;
+    realAddress = currentLocation.location;
     lon = currentLocation.longitude;
     lat = currentLocation.latitude;
+    console.log(log);
   }
 });
 
@@ -32,11 +34,8 @@ function getForm() {
   var data = JSON.stringify({
     "title": strEventName.value
   })
-
-
       // Write event data to Firebase
       var ref = firebase.database().ref('Event');
-
       var data = {
         eventName: strEventName.value,
         category: strUser,
