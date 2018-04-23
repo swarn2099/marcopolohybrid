@@ -11,7 +11,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="orientation" value="portrait" />
-<!-- <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" /> -->
+<plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
 <preference name="phonegap-version" value="cli-7.0.1" />
 <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
 <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
@@ -22,7 +22,7 @@
 <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0" />
 <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
-<!-- <preference name="StatusBarOverlaysWebView" value="true" /> -->
+<preference name="StatusBarOverlaysWebView" value="true" />
 
 <platform name="android">
     <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
